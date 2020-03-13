@@ -16,8 +16,9 @@ class App extends React.Component {
   onSearchSubmit = async (keywords) => {
     this.setState({ ...this.state, isSearching: true });
     const { countryFilter, discoveryFilter } = this.state;
-    const searchNewsFn = discoveryFilter === 'top' ? newsService.searchTopHeadlines : newsService.searchEverything;
-    const { data } = await searchNewsFn(keywords, countryFilter);
+    const { data } = await (discoveryFilter === 'top' ?
+      newsService.searchTopHeadlines(keywords, countryFilter) :
+      newsService.searchEverything(keywords));
     const articles = data.articles.map(a => ({ ...a, id: a.url }));
     this.setState({ ...this.state, searchResults: articles, isSearching: false });
   };
