@@ -15,7 +15,7 @@ const Dropdown = ({ id, value, options, placeholder, onSelect }) => {
     <select
       id={id}
       value={value}
-      onChange={e => onSelect(e.value)}
+      onChange={e => onSelect(e.target.value)}
       className="ui fluid normal dropdown">
       { placeholder && renderOption({ name: placeholder, value: '' }) }
       { options.map(renderOption) }
