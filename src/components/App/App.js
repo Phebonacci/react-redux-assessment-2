@@ -61,6 +61,11 @@ class App extends React.Component {
           <div className={`ui inverted dimmer ${this.state.isSearching ? 'active' : ''}`}>
             <div className="ui text loader">Searching</div>
           </div>
+
+          <div className="ui segment">
+            <div className="ui small header">Search Results!</div>
+            <p>Found {this.state.searchResults.length} article/s</p>
+          </div>
           <ArticleList articles={this.state.searchResults} />
         </div>
       </div>
