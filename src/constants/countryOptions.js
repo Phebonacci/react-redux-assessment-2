@@ -8,6 +8,10 @@ const COUNTRY_OPTIONS = [
     value: 'be',
   },
   {
+    name: 'China',
+    value: 'cn',
+  },
+  {
     name: 'Germany',
     value: 'de',
   },
