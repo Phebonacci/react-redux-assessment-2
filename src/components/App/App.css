@@ -1,0 +1,17 @@
+.app {
+  position: relative;
+  padding: 16px;
+}
+
+.app > .ui.secondary.menu {
+  border-radius: 4px;
+  background: gainsboro;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.app > .ui.segment {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
